@@ -101,6 +101,11 @@ document.getElementById('qtImage').addEventListener('click', function () {
 document.getElementById('qqImage').addEventListener('click', function () {
     location.href = 'events/qq.html';
 });
+//sponsor
+document.getElementById('hudhudImage').addEventListener('click', function () {
+    location.href = 'https://www.hudhud.in/';
+});
+
 
 
 document.addEventListener('DOMContentLoaded', function () {

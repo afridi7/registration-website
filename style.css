@@ -10,8 +10,9 @@
 
 :root {
     --black: #060216;
-    --grad: linear-gradient(#001f2a, #198097, #001118);
-    --grad-inv: linear-gradient(#198097, #001f2a, #198097);
+    /* --grad: linear-gradient(#001f2a, #198097, #001118); */
+    /* --grad-inv: linear-gradient(#198097, #001f2a, #198097); */
+    --grad: #060216;
     --grey: #afafaf;
     --white: #f4f4f4;
     --transparent: rgba(0, 0, 0, 0.6);
@@ -28,13 +29,9 @@ main {
 }
 
 body {
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("images/background.png");
-    
-    /* background-image: url("images/oldbackground.png"); */
 
-    /* background-size: contain; */
+    background-image: url("images/background.png");
+    background-size: cover;
     background-repeat: repeat;
     justify-content: center;
     align-items: center;
@@ -59,7 +56,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 1px;
+    padding: 20px 0px;
     /* background: var(--black); */
 
     background: var(--grad);
@@ -166,7 +163,7 @@ li {
 
     body {
         /* backdrop-filter: blur(10px); */
-        background-size: contain;
+        background-size: cover;
     }
 
     .navigation a {
@@ -193,16 +190,17 @@ li {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        padding: 10px 0px;
         z-index: 1;
     }
 
     header .logo {
-        margin-left: -35px;
+        margin-left: -40px;
     }
 
-    #imglogo{
+    #imglogo {
         padding-top: 10px;
-        max-width: 220px;
+        max-width: 250px;
     }
 
     .hamburger {
@@ -248,7 +246,7 @@ li {
         justify-content: center;
         align-items: center;
         background: var(--grad);
-        opacity: 95%;
+        opacity: 98%;
     }
 
     .events img {
@@ -283,7 +281,41 @@ li {
 
     }
 
+    .contact-grid {
+        transform: translateX(-13%);
+    }
+
+    .contact-box {
+        display: flex;
+        gap: 0;
+        flex: 1 1 100%;
+        /* Ensure each box takes full width on small screens */
+        max-width: 100%;
+        /* Ensure each box takes full width */
+        margin: 20px;
+        /* Add margin for spacing */
+    }
+
+    .contact-info {
+        width: 100%;
+        /* Full width for narrow screens */
+        padding: 15px;
+        /* Reduce padding for smaller screens */
+    }
+
+
+    .sponsor img {
+        width: 45%;
+    }
+
+    .sponsor img:hover {
+        width: 55%;
+    }
+
 }
+
+
+
 
 /* wrapper ----------------------------------------------------------*/
 
@@ -293,7 +325,7 @@ li {
     top: 80px;
     position: relative;
     width: 370px;
-    background: var(--grad);
+    background: var(--transparent);
     box-shadow: 10px 10px 10px var(--black);
     border: 1px solid var(--grey);
     color: var(--white);
@@ -480,6 +512,27 @@ li {
 
 /* home blobs ---------------------------------------------------------- */
 
+.main img {
+    max-width: 30%;
+}
+
+.clg {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main p {
+
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10%;
+    text-align: center;
+    color: var(--white);
+}
+
+
 body .events {
     width: 90%;
     margin: auto;
@@ -500,6 +553,34 @@ body .events {
     box-shadow: 10px 10px 10px black;
     transition: 0.2s;
 }
+
+
+body .sponsor {
+    width: 90%;
+    margin: auto;
+}
+
+.sponsor img {
+    display: flex;
+    margin: 20px auto;
+    max-width: 20%;
+    border: 3px solid var(--transparent);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.sponsor img:hover {
+    max-width: 35%;
+    border: none;
+    box-shadow: 10px 10px 10px black;
+    transition: 0.2s;
+}
+
+.sponsor h2 {
+    color: var(--white);
+}
+
+
 
 /* about ---------------------------------------------------------- */
 
@@ -578,6 +659,95 @@ h3 {
 
 .upperarrow .arrow1 {
     margin-bottom: 50px;
+}
+
+/* contact us ---------------------------------------------------------- */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: center;
+    gap: 30%;
+    margin: 40px 0;
+}
+
+.contact-box {
+    display: flex;
+    gap: 0;
+    flex: 1 1 calc(33.33% - 40px);
+    /* 3 boxes per row */
+    max-width: calc(33.33% - 40px);
+    /* Ensure consistent spacing */
+    margin: 20px;
+    /* Add margin for spacing */
+}
+
+.image-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00ffff;
+    overflow: hidden;
+    box-shadow: 0 0 5px #00ffff;
+    transition: box-shadow 0.4s ease-in-out, transform 0.3s ease;
+}
+
+.image-container:hover {
+    box-shadow: 0 0 15px #00ffff, 0 0 15px #00ffff;
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ffff;
+    border-radius: 20px;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    top: -87px;
+    left: 100px;
+}
+
+.contact-info:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ffff, 0 0 20px #00ffff;
+}
+
+.contact-info h3 {
+    font-size: 1rem;
+    margin: 3px;
+    padding: 8px;
+}
+
+.contact-info p {
+    font-size: 0.8rem;
+    margin: 3px;
+    padding: 3px;
+}
+
+.center-contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* Allow wrapping */
 }
 
 
@@ -665,7 +835,7 @@ section {
 
 .register .navigation {
     justify-content: center;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
 }
 
 .register .navigation .btnLogin-popup {
@@ -675,6 +845,7 @@ section {
     border: 1px solid var(--grey);
     font-size: 1.5rem;
     font-weight: 600;
+    margin-left: auto;
 }
 
 .register .navigation .btnLogin-popup:hover {
@@ -759,7 +930,7 @@ section {
 }
 
 .timeline-content h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--white);
 }
 
