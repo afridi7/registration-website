@@ -14,7 +14,7 @@
     --grad-inv: linear-gradient(#198097, #001f2a, #198097);
     --grey: #afafaf;
     --white: #f4f4f4;
-    --transparent: #0000001a;
+    --transparent: rgba(0, 0, 0, 0.6);
 }
 
 html,
@@ -28,13 +28,13 @@ main {
 }
 
 body {
-    background-size: cover;
-
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Dark overlay */
-        url("images/background.png");
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("images/background.png");
+    
+    /* background-image: url("images/oldbackground.png"); */
 
-    /* background-image: url("images/background.png"); */
+    /* background-size: contain; */
     background-repeat: repeat;
     justify-content: center;
     align-items: center;
@@ -164,10 +164,10 @@ li {
 
 @media screen and (max-width: 1100px) {
 
-    /* body {
-        font-size: 1rem;
-        backdrop-filter: blur(10px);
-    } */
+    body {
+        /* backdrop-filter: blur(10px); */
+        background-size: contain;
+    }
 
     .navigation a {
         font-size: 1em;
@@ -202,6 +202,7 @@ li {
 
     #imglogo{
         padding-top: 10px;
+        max-width: 220px;
     }
 
     .hamburger {
@@ -348,6 +349,11 @@ li {
     filter: invert(100%);
 }
 
+.input-box input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none;
+}
 
 /* t&c ----------------------------------------------------------*/
 
@@ -498,11 +504,9 @@ body .events {
 /* about ---------------------------------------------------------- */
 
 .about {
-    min-height: 100vh;
     padding-bottom: 50px;
-    width: 80%;
-    margin: 0 auto;
-    letter-spacing: 0.08rem;
+    font-size: 1rem;
+    margin: 10px;
     text-align: center;
 }
 
@@ -536,7 +540,7 @@ h3 {
     margin: 10px 0 40px 0;
     color: var(--white);
     line-height: 1.2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .photos {
@@ -632,7 +636,7 @@ h3 {
 .answer {
     display: none;
     padding-top: 10px;
-    color: var(--grey);
+    color: var(--white);
     font-size: 1.5rem;
 }
 
@@ -669,7 +673,7 @@ section {
     background: var(--grad);
     color: var(--grey);
     border: 1px solid var(--grey);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
