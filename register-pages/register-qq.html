@@ -33,15 +33,14 @@
         </nav>
 
     </header>
-
+<div class="loader"></div>
     <div class="wrapper">
 
         <div class="register">
-            <form action="#">
                 <h1>Quizzie Quest</h1>
 
                 <div class="input-box">
-                    <input type="text" name="Participant" placeholder="Participant's Name" required>
+                    <input type="text" id="Participant1" placeholder="Participant's Name" required>
                     <i class="fa fa-user"></i>
                 </div>
 
@@ -88,10 +87,7 @@
                 </div>
 
                 <button id="previous" class="btn">Previous</button>
-                <button type="submit" class="btn">Next</button>
-
-
-            </form>
+                <button onclick="submitForm()" class="btn">Submit</button> 
 
         </div>
 
