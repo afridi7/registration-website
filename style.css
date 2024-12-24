@@ -6,13 +6,12 @@
     padding: 0;
     box-sizing: border-box;
     border-radius: 5px;
+    text-shadow: 0px 4px 5px black;
+    -webkit-text-stroke: 0.3px var(--transparent);
 }
 
 :root {
-    --black: #060216;
-    /* --grad: linear-gradient(#001f2a, #198097, #001118); */
-    /* --grad-inv: linear-gradient(#198097, #001f2a, #198097); */
-    --grad: #060216;
+    --black: #03000c;
     --grey: #afafaf;
     --white: #f4f4f4;
     --transparent: rgba(0, 0, 0, 0.6);
@@ -29,8 +28,9 @@ main {
 }
 
 body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images/background.png");
 
-    background-image: url("images/background.png");
     background-size: cover;
     background-repeat: repeat;
     justify-content: center;
@@ -59,7 +59,7 @@ header {
     padding: 20px 0px;
     /* background: var(--black); */
 
-    background: var(--grad);
+    background: var(--black);
 
     border-radius: 0px;
     display: flex;
@@ -70,17 +70,8 @@ header {
 
 }
 
-header .logo {
-    font-family: League Spartan;
-    font-weight: 700;
-    font-size: 2rem;
-    text-decoration: none;
-    color: var(--white);
-    user-select: none;
-}
-
 #imglogo {
-    width: 250px;
+    width: 350px;
 }
 
 .nav-link {
@@ -132,7 +123,7 @@ li {
     padding: 15px 25px;
     width: 130px;
     height: 50px;
-    background: var(--grad);
+    background: var(--black);
     border: 1px solid var(--grey);
     outline: none;
     cursor: pointer;
@@ -144,7 +135,7 @@ li {
 }
 
 .navigation .btnLogin-popup:hover {
-    background: var(--grad-inv);
+    background: var(--transparent);
 }
 
 
@@ -159,7 +150,7 @@ li {
 
 /* media query ----------------------------------------------------------*/
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1100px),(max-width: 768px) {
 
     body {
         /* backdrop-filter: blur(10px); */
@@ -245,8 +236,7 @@ li {
         left: 0;
         justify-content: center;
         align-items: center;
-        background: var(--grad);
-        opacity: 98%;
+        background: var(--black);
     }
 
     .events img {
@@ -309,9 +299,8 @@ li {
     }
 
     .sponsor img:hover {
-        width: 55%;
+        width: 46%;
     }
-
 }
 
 
@@ -371,6 +360,7 @@ li {
 
 .input-box input::placeholder {
     color: var(--black);
+    text-shadow: none;
 }
 
 .input-box i {
@@ -418,7 +408,7 @@ li {
     margin-bottom: 15px;
     width: 100%;
     height: 50px;
-    background: var(--grad);
+    background: var(--black);
     color: var(--white);
     border: 1px solid var(--grey);
     outline: none;
@@ -430,7 +420,7 @@ li {
 }
 
 .wrapper .btn:hover {
-    background: var(--grad-inv);
+    background: var(--transparent);
     box-shadow: 5px 5px 5px var(--black);
 }
 
@@ -445,6 +435,7 @@ li {
 
 .dropdown * {
     box-sizing: border-box;
+    text-shadow: none;
 }
 
 .select {
@@ -513,7 +504,7 @@ li {
 /* home blobs ---------------------------------------------------------- */
 
 .main img {
-    max-width: 30%;
+    max-width: 80%;
 }
 
 .clg {
@@ -563,15 +554,15 @@ body .sponsor {
 .sponsor img {
     display: flex;
     margin: 20px auto;
-    max-width: 20%;
+    max-width: 35%;
     border: 3px solid var(--transparent);
     border-radius: 10px;
     transition: 0.2s;
 }
 
 .sponsor img:hover {
-    max-width: 35%;
     border: none;
+    max-width: 33%;
     box-shadow: 10px 10px 10px black;
     transition: 0.2s;
 }
@@ -589,6 +580,7 @@ body .sponsor {
     font-size: 1rem;
     margin: 10px;
     text-align: center;
+    
 }
 
 .about .main {
@@ -604,7 +596,7 @@ h2 {
 .about h1 {
     text-align: center;
     margin: 30px;
-    color: var(--grey);
+    color: var(--white);
 }
 
 .about h2,
@@ -612,16 +604,17 @@ h3 {
     margin-top: 5%;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    color: var(--grey);
-    border-bottom: 2px solid var(--grey);
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
     border-radius: 0%;
 }
 
 .about p {
-    margin: 10px 0 40px 0;
+    margin: 10px auto 40px auto;
+    max-width: 90%;
     color: var(--white);
     line-height: 1.2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .photos {
@@ -758,11 +751,10 @@ h3 {
     width: 100%;
     max-width: 1000px;
     margin: 5% auto;
-    padding: 5%;
 }
 
 .faq-container h1 {
-    color: var(--grey);
+    color: var(--white);
     text-align: center;
     margin-bottom: 5%;
 }
@@ -774,7 +766,7 @@ h3 {
 }
 
 .faq-item {
-    background: var(--grad);
+    background: var(--black);
     border: 1px solid var(--grey);
     padding: 20px;
 }
@@ -810,6 +802,37 @@ h3 {
     font-size: 1.5rem;
 }
 
+/* rules ---------------------------------------------------------- */
+
+.rules {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 10px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 80%;
+    padding-top: 50px;
+}
+
+.rules h1 {
+    color: var(--white);
+    text-align: center;
+}
+
+.rules li{
+    list-style-type:circle;
+    text-align: justify;
+    color: var(--white);
+    padding: 10px;
+}
+
+.rules strong{
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--white);
+    border-radius: 0px;
+}
 
 
 /* events ---------------------------------------------------------- */
@@ -840,8 +863,8 @@ section {
 
 .register .navigation .btnLogin-popup {
     padding: 15px 15px;
-    background: var(--grad);
-    color: var(--grey);
+    background: var(--black);
+    color: var(--white);
     border: 1px solid var(--grey);
     font-size: 1.5rem;
     font-weight: 600;
@@ -849,13 +872,13 @@ section {
 }
 
 .register .navigation .btnLogin-popup:hover {
-    background: var(--grad-inv);
+    background: var(--transparent);
 }
 
 /* footer ---------------------------------------------------------- */
 
 .footer {
-    background: var(--grad);
+    background: var(--black);
     opacity: 90%;
     text-align: center;
     padding: 20px 0;
