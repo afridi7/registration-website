@@ -71,7 +71,7 @@ header {
 }
 
 #imglogo {
-    width: 350px;
+    width: 200px;
 }
 
 .nav-link {
@@ -191,7 +191,8 @@ li {
 
     #imglogo {
         padding-top: 10px;
-        max-width: 250px;
+        margin: 10px;
+        max-width: 150px;
     }
 
     .hamburger {
