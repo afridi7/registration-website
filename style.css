@@ -85,18 +85,25 @@ header {
     top: 50%;
     left: 50%;
     z-index: 10;
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* menu ----------------------------------------------------------*/
 
@@ -205,14 +212,15 @@ li {
 }
 
 .input-box input {
+    padding: 20px 45px 20px 20px;
     width: 100%;
     height: 100%;
     background: var(--white);
+    color: var(--black);
     outline: none;
     border: 1px solid var(--black);
     font-size: 12px;
-    color: var(--black);
-    padding: 20px 45px 20px 20px;
+    text-shadow: none;
 }
 
 .input-box input:hover {
@@ -407,14 +415,17 @@ body .events {
 }
 
 
-body .sponsor {
-    width: 90%;
+.sponsor {
+    max-width: 60%;
     margin: auto;
+    display: flex;
+
+    justify-content: center;
 }
 
 .sponsor img {
-    display: flex;
-    margin: 20px auto;
+    margin: 10px;
+    margin-bottom: 40px;
     max-width: 35%;
     border: 3px solid var(--transparent);
     border-radius: 10px;
@@ -426,10 +437,6 @@ body .sponsor {
     max-width: 33%;
     box-shadow: 10px 10px 10px black;
     transition: 0.2s;
-}
-
-.sponsor h2 {
-    color: var(--white);
 }
 
 
@@ -478,7 +485,7 @@ section {
 
 .register .navigation {
     justify-content: center;
-    padding-bottom: 10%;
+    margin: 50px 0px;
 }
 
 .register .navigation .btnLogin-popup {
@@ -495,7 +502,7 @@ section {
     background: var(--transparent);
 }
 
- .register .nav-item {
+.register .nav-item {
     padding-right: 0px;
 }
 
@@ -517,7 +524,6 @@ section {
 .about h1,
 h2 {
     font-size: 2rem;
-    color: var(--black);
 }
 
 .about h1 {
@@ -660,7 +666,8 @@ h3 {
     margin: 3px;
     padding: 3px;
 }
-.contact-info a{
+
+.contact-info a {
     font-size: 0.8rem;
     margin: 3px;
     padding: 3px;
@@ -753,13 +760,11 @@ h3 {
 
 .rules {
     font-size: 1.3rem;
-    font-weight: 600;
-    margin: 10px auto;
+    font-weight: 500;
+    margin: 10px 10px;
     text-align: center;
-    display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 80%;
+    max-width: 100%;
     padding-top: 50px;
 }
 
@@ -769,8 +774,6 @@ h3 {
 }
 
 .rules li {
-    list-style-type: circle;
-    text-align: justify;
     color: var(--white);
     padding: 10px;
 }
@@ -1035,11 +1038,8 @@ h3 {
         display: flex;
         gap: 0;
         flex: 1 1 100%;
-        /* Ensure each box takes full width on small screens */
         max-width: 100%;
-        /* Ensure each box takes full width */
         margin: 20px;
-        /* Add margin for spacing */
     }
 
     .contact-info {
@@ -1050,12 +1050,16 @@ h3 {
         max-width: 90%;
     }
 
+    .sponsor {
+        flex-wrap: wrap;
+    }
+
     .sponsor img {
-        width: 45%;
+        max-width: 55%;
     }
 
     .sponsor img:hover {
-        width: 46%;
+        max-width: 57%;
     }
 
     .map iframe {
