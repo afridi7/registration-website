@@ -433,6 +433,72 @@ body .sponsor {
 }
 
 
+/* events ---------------------------------------------------------- */
+
+.eventname {
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.eventname a {
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.eventname a:hover {
+    color: var(--grey);
+    transition: 0.2s ease;
+}
+
+main {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: var(--white);
+}
+
+main li {
+    padding-top: 6%;
+}
+
+/* Section Spacing */
+section {
+    margin-bottom: 10%;
+}
+
+.register .navigation {
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.register .navigation .btnLogin-popup {
+    padding: 15px 15px;
+    background: var(--black);
+    color: var(--white);
+    border: 1px solid var(--grey);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.register .navigation .btnLogin-popup:hover {
+    background: var(--transparent);
+}
+
+ .register .nav-item {
+    padding-right: 0px;
+}
+
 
 /* about ---------------------------------------------------------- */
 
@@ -716,50 +782,6 @@ h3 {
 }
 
 
-/* events ---------------------------------------------------------- */
-
-
-main {
-    justify-content: center;
-    text-align: center;
-    font-size: 1.2rem;
-    margin-right: 5px;
-    margin-left: 5px;
-    color: var(--white);
-}
-
-main li {
-    padding-top: 6%;
-}
-
-/* Section Spacing */
-section {
-    margin-bottom: 10%;
-}
-
-.register .navigation {
-    justify-content: center;
-    padding-bottom: 10%;
-}
-
-.register .navigation .btnLogin-popup {
-    padding: 15px 15px;
-    background: var(--black);
-    color: var(--white);
-    border: 1px solid var(--grey);
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-left: auto;
-}
-
-.register .navigation .btnLogin-popup:hover {
-    background: var(--transparent);
-}
-
- .register .nav-item {
-    padding-right: 0px;
-}
-
 /* footer ---------------------------------------------------------- */
 
 
@@ -980,6 +1002,7 @@ section {
     }
 
     .nav-menu.active {
+        margin-top: 80px;
         position: absolute;
         left: 0;
         justify-content: center;
