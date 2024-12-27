@@ -103,15 +103,6 @@ document.getElementById('qqImage').addEventListener('click', function () {
 });
 
 
-//sponsor
-document.getElementById('hudhudImage').addEventListener('click', function () {
-    location.href = 'https://www.hudhud.in/';
-});
-document.getElementById('iaryzImage').addEventListener('click', function () {
-    location.href = 'https://linktr.ee/iaryz';
-});
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const nextButton = document.getElementById('next');
