@@ -1,0 +1,26 @@
+.register .navigation {
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.register .navigation .btnLogin-popup {
+    padding: 15px 15px;
+    background: var(--black);
+    color: var(--white);
+    border: 1px solid var(--grey);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.register .navigation .btnLogin-popup:hover {
+    background: var(--transparent);
+}
+
+.register .nav-item {
+    padding-right: 0px;
+}
+
+.cursor{
+    cursor: pointer;
+}

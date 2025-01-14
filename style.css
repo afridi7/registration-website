@@ -68,7 +68,7 @@ header {
 }
 
 #imglogo {
-    width: 400px;
+    width: 300px;
 }
 
 .nav-link {
@@ -177,7 +177,7 @@ li {
     margin-bottom: 100%;
     top: 80px;
     position: relative;
-    width: 370px;
+    width: 500px;
     background: var(--transparent);
     box-shadow: 10px 10px 10px var(--black);
     border: 1px solid var(--grey);
@@ -187,7 +187,6 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     transition: 0.2s;
 }
 
@@ -215,7 +214,7 @@ li {
     color: var(--black);
     outline: none;
     border: 1px solid var(--black);
-    font-size: 12px;
+    font-size: 0.8rem;
     text-shadow: none;
 }
 
@@ -268,6 +267,11 @@ li {
     font-size: 14px;
 }
 
+.regfix button {
+    display: none;
+}
+
+
 .wrapper .btn {
     margin-top: 10px;
     margin-bottom: 15px;
@@ -279,7 +283,7 @@ li {
     outline: none;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 30%);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: 600;
     transition: 0.2s;
 }
@@ -294,7 +298,6 @@ li {
 
 .dropdown {
     position: relative;
-    /* padding: 15px 20px 15px 20px; */
     min-width: 15em;
 }
 
@@ -408,28 +411,49 @@ body .events {
     border: none;
     box-shadow: 10px 10px 10px black;
     transition: 0.2s;
+    cursor: pointer;
 }
+
+/* sponsors ---------------------------------------------------------- */
 
 
 .sponsor {
-    max-width: 60%;
-    margin: auto;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    max-width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
 }
 
-.sponsor img {
-    margin: 50px;
-    margin-bottom: 40px;
+.sponsor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.sponsor-item a img {
     border: 2px solid var(--white);
     border-radius: 10px;
     transition: 0.2s;
 }
 
-.sponsor img:hover {
-    border: 2px solid var(--grey);
+.sponsor-item a img:hover {
+    border-color: var(--grey);
     box-shadow: 10px 10px 10px black;
-    transition: 0.2s;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
 }
 
 
@@ -511,7 +535,7 @@ section {
 }
 
 .about .main {
-    margin: 100px auto;
+    margin: 10% auto;
 }
 
 .about h1,
@@ -521,15 +545,13 @@ h2 {
 
 .about h1 {
     text-align: center;
-    margin: 30px;
     color: var(--white);
 }
 
 .about h2,
 h3 {
     margin-top: 5%;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
+    margin-bottom: 5%;
     color: var(--white);
     border-bottom: 2px solid var(--white);
     border-radius: 0%;
@@ -539,8 +561,8 @@ h3 {
     margin: 10px auto 40px auto;
     max-width: 90%;
     color: var(--white);
-    line-height: 1.2rem;
-    font-size: 1.2rem;
+    line-height: 2rem;
+    font-size: 1.8rem;
 }
 
 .photos {
@@ -564,21 +586,6 @@ h3 {
     transition: 0.2s;
 }
 
-.arrow {
-    margin: 100px auto;
-}
-
-.arrow1 {
-    margin: -120px auto 100px auto;
-}
-
-.upperarrow .arrow {
-    margin-top: 30px;
-}
-
-.upperarrow .arrow1 {
-    margin-bottom: 50px;
-}
 
 /* contact us ---------------------------------------------------------- */
 
@@ -593,7 +600,7 @@ h3 {
     /* Allow wrapping on smaller screens */
     justify-content: center;
     gap: 30%;
-    margin: 40px 0;
+    margin-left: 50px;
 }
 
 .contact-box {
@@ -628,7 +635,13 @@ h3 {
     height: 100%;
     object-fit: cover;
 }
-
+.contact-item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    gap: 50px;
+    align-items: center;
+}
 .contact-info {
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid #00ffff;
@@ -638,9 +651,9 @@ h3 {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    top: -87px;
-    left: 100px;
+    /* position: relative;
+    top: -50px;
+    left: 50; */
 }
 
 .contact-info:hover {
@@ -690,7 +703,7 @@ h3 {
 }
 
 .faq-item {
-    background: var(--black);
+    background: var(--transparent);
     border: 1px solid var(--grey);
     padding: 20px;
 }
@@ -717,11 +730,17 @@ h3 {
 
 .answer {
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
     color: var(--white);
     font-size: 1.5rem;
     padding-top: 0;
-    transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out;
+    transition: max-height 0.2s ease, padding-top 0.2s ease;
+}
+
+.answer li {
+    margin: 10px 0px;
+    padding: 10px;
+    border: 1px solid var(--grey);
 }
 
 .faq-item input[type="checkbox"]:checked+label+.answer {
@@ -731,12 +750,12 @@ h3 {
 
 .faq-item label .fa-chevron-down {
     display: inline-block;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
 .faq-item label .fa-chevron-up {
     display: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
 .faq-item input[type="checkbox"]:checked+label .fa-chevron-down {
@@ -776,7 +795,6 @@ h3 {
     border-bottom: 2px solid var(--white);
     border-radius: 0px;
 }
-
 
 /* footer ---------------------------------------------------------- */
 
@@ -930,8 +948,8 @@ h3 {
 
 /* media query ----------------------------------------------------------*/
 
-@media screen and (max-width: 1100px),
-(max-width: 768px) {
+@media screen and (max-width: 1200px),
+(max-width: 768px), (max-width: 400px), (max-width: 375px), (max-width: 290px) {
 
     body {
         /* backdrop-filter: blur(10px); */
@@ -943,11 +961,11 @@ h3 {
     }
 
     header .logo {
-        margin-left: -40px;
+        margin-left: -30px;
     }
 
     #imglogo {
-        padding-top: 10px;
+        margin-top: 10px;
         max-width: 200px;
     }
 
@@ -984,12 +1002,10 @@ h3 {
 
     .nav-item {
         margin-top: 20px;
-        margin-bottom: 20px;
         padding-right: 20px;
     }
 
     .nav-menu.active {
-        margin-top: 80px;
         position: absolute;
         left: 0;
         justify-content: center;
@@ -1032,16 +1048,12 @@ h3 {
 
     .faq-container {
         max-width: 90%;
-    }
-
-    .sponsor {
-        flex-wrap: wrap;
-    }
+    }    
 
     .sponsor img {
         width: 200px;
         height: 200px;
-    }
+    }    
 
     .map iframe {
         width: 300px;
@@ -1054,6 +1066,41 @@ h3 {
 
     .footer .row ul {
         padding: 10px 0px;
+    }
+
+    .regfix button {
+        font-weight: bold;
+        font-size: 10px;
+        text-align: center;
+        cursor: pointer;
+        position: fixed;
+        right: 80px;
+        bottom: 160px;
+        height: 50px;
+        width: 80px;
+        border-radius: 130px;
+        display: inline;
+        z-index: 111;
+        border: 1px solid var(--grey);
+        background: var(--black);
+        color: var(--white);
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .sponsor {
+        flex-wrap: wrap;
+    }
+    
+    .links {
+        flex-wrap: wrap;
     }
 
 }
